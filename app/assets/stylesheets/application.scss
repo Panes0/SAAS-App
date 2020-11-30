@@ -1,0 +1,60 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Typo styles
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+// nav gradient
+.navbar, .home-callout {
+  // Gradients by https://twitter.com/_ighosh
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+// nav styles
+.navbar-brand {
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+.navbar-dark .navbar-brand {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.navbar-toggler {
+  &:hover,:focus {
+    background-color: #302b63;
+  }
+}
+
+// homepage style
+.home-callout {
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
