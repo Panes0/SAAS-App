@@ -38,6 +38,9 @@ gem 'font-awesome-sass', '~> 5.15.1'
 # To visualize the DB
 gem 'hirb'
 
+# dotenv to saet ENV variables
+gem 'dotenv-rails', groups: [:development, :test]
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
