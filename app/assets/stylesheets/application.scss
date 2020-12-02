@@ -23,8 +23,21 @@ h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
 }
 
+.welcome-txt h1{
+  display: inline
+}
+
+.welcome-txt .pantest{
+  font-family: 'Yellowtail', cursive;
+  font-size: 60px;
+}
+
+.pantest{
+  font-family: 'Yellowtail', cursive;
+}
+
 // nav gradient
-.navbar, .home-callout {
+.navbar, .home-callout,  {
   // Gradients by https://twitter.com/_ighosh
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */

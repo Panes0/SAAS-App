@@ -1,4 +1,31 @@
 <div class="home-callout text-center container-fluid">
-  <h1>Welcome to PanApp</h1>
+  <div class="welcome-txt">
+    <h1>Welcome to </h1> <h1 class="pantest">PanApp</h1>
+  </div>
   <h3>A membership site where you can share your Pans</h3>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="card bg-transparent text-center border-light mt-3">
+          <div class="card-body">
+            <h4 class="card-title">BASIC MEMBERSHIP</h5>
+            <p class="card-text">Sign Up for free and start sharing your Pans</p>
+            <%= link_to "Sign Up with a free account" , "#" , class: "btn btn-secondary btn-lg btn-block" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-transparent text-center border-warning mt-3">
+          <div class="card-body text-warning">
+            <h4 class="card-title">PRIME MEMBERSHIP</h5>
+            <p class="card-text">Paid membership plan to get UNLIMITED Pan access </p>
+            <%= link_to "Sign Up with a Prime account" , "#" , class: "btn btn-warning btn-lg btn-block" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div>
