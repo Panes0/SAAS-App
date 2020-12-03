@@ -3,6 +3,11 @@
     <div class="col-md-4 offset-md-4">
       <div class="card mt-2"">
         <div class="card-header">
+          <% if params[:plan] == '2'%>
+            <h2>Prime Sign Up form</h2>
+          <% else %>
+            <h2>Free Sign Up form</h2>
+          <% end %>
           <h2>Sign up</h2>
         </div>
 
