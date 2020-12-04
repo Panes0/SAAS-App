@@ -1,43 +1,27 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 offset-md-4">
+      <div class="text-center mt-3">
+        <% if params[:plan] == '2'%>
+          <h1>Prime Account</h1>
+          <h5>Sign Up with a Prime Account for $9/month and get Full access to community Pans!</h5>
+        <% else %>
+        <h1>Basic Account</h1>
+        <h6>Sign Up with a free account and start Panning right now!</h6>
+        <% end %>
+      </div>
+
       <div class="card mt-2"">
         <div class="card-header">
-          <% if params[:plan] == '2'%>
-            <h2>Prime Sign Up form</h2>
-          <% else %>
-            <h2>Free Sign Up form</h2>
-          <% end %>
           <h2>Sign up</h2>
         </div>
-
         <div class="card-body">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
-
-            <div class="field form-group">
-              <%= f.label :email, class: "font-weight-bold" %><br />
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"  %>
-            </div>
-
-            <div class="field form-group">
-              <%= f.label :password, class: "font-weight-bold" %>
-              <% if @minimum_password_length %>
-              <em>(min <%= @minimum_password_length %> char)</em>
-              <% end %><br />
-              <%= f.password_field :password, autocomplete: "new-password", class: "form-control"  %>
-            </div>
-
-            <div class="field form-group">
-              <%= f.label :password_confirmation, class: "font-weight-bold" %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
-            </div>
-
-            <div class="actions form-group mt-2">
-              <%= f.submit "Sign up", class: "btn btn-success" %>
-            </div>
-            <% end %>
-            <%= render "devise/shared/links" %>
+          <% if params[:plan] == '2'%>
+            <%= render "prime_form"%>
+          <% else %>
+            <%= render "basic_form"%>
+          <% end %>
+          <%= render "devise/shared/links" %>
         </div>
       </div>
   </div>
